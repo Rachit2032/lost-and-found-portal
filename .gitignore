@@ -1,9 +1,5 @@
-node_modules/
-files/node_modules/
-
-__pycache__/
-_pycache_/
-venv/
-env/
-
-.env
+frontend/node_modules/
+backend/__pycache__/
+backend/.env
+backend/venv/
+.vscode/
