@@ -83,7 +83,7 @@ export default function AddItem() {
 
       const token = localStorage.getItem("token");
 
-      await axios.post("http://localhost:5000/api/items", data, {
+      await axios.post("https://lost-and-found-portal-et2c.onrender.com/api/items", data, {
         headers: { 
           "Content-Type": "multipart/form-data",
           "Authorization": `Bearer ${token}` 

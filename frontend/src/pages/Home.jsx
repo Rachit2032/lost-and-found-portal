@@ -34,7 +34,7 @@ export default function Home() {
     try {
       setLoading(true);
       setError("");
-      const res = await axios.get("http://localhost:5000/api/items");
+      const res = await axios.get("https://lost-and-found-portal-et2c.onrender.com/api/items");
       setItems(res.data);
     } catch {
       setError("Could not connect to the server. Make sure the backend is running on port 5000.");

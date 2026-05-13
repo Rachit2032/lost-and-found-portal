@@ -16,7 +16,7 @@ export default function EditItem() {
     // Fetch the existing data to fill the form
     const fetchItem = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/items`);
+        const res = await axios.get(`https://lost-and-found-portal-et2c.onrender.com/api/items`);
         const itemToEdit = res.data.find(i => String(i.id) === String(id));
         if (itemToEdit) {
           setForm({
@@ -43,7 +43,7 @@ export default function EditItem() {
     Object.keys(form).forEach(key => data.append(key, form[key]));
 
     try {
-      await axios.put(`http://localhost:5000/api/items/${id}`, data, {
+      await axios.put(`https://lost-and-found-portal-et2c.onrender.com/api/items/${id}`, data, {
         headers: { "Authorization": `Bearer ${token}` }
       });
       navigate("/");

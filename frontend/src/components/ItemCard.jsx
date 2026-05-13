@@ -13,7 +13,7 @@ export default function ItemCard({ item, index, refreshItems }) {
   const handleDelete = async () => {
     if (!window.confirm("Are you sure you want to delete this post?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/items/${item.id}`);
+      await axios.delete(`https://lost-and-found-portal-et2c.onrender.com/api/items/${item.id}`);
       refreshItems();
     } catch (err) {
       alert("Failed to delete. Make sure you are the owner.");
@@ -22,7 +22,7 @@ export default function ItemCard({ item, index, refreshItems }) {
 
   const handleResolve = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/items/${item.id}`);
+      await axios.put(`https://lost-and-found-portal-et2c.onrender.com/api/items/${item.id}`);
       refreshItems();
     } catch (err) {
       alert("Failed to update status");

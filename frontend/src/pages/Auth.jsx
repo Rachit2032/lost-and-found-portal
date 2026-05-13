@@ -14,11 +14,11 @@ export default function Auth() {
     e.preventDefault();
     try {
       if (isLogin) {
-        const res = await axios.post("http://localhost:5000/api/login", form);
+        const res = await axios.post("https://lost-and-found-portal-et2c.onrender.com/api/login", form);
         login(res.data.access_token, res.data.user);
         navigate("/");
       } else {
-        await axios.post("http://localhost:5000/api/register", form);
+        await axios.post("https://lost-and-found-portal-et2c.onrender.com/api/register", form);
         setIsLogin(true); // Switch to login after successful register
         setError("Registration successful! Please login.");
       }
