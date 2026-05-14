@@ -15,11 +15,10 @@ export default function Navbar() {
   return (
     <nav style={{ /* ... your existing nav styles ... */ }}>
       <div style={{ /* ... your existing div styles ... */ }}>
-        {/* Logo remains the same */}
 
         {/* Nav links */}
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <Link to="/" style={{ /* ... your existing browse link styles ... */ }}>
+          <Link to="/" className="browse-btn" style={{ /* ... your existing browse link styles ... */ }}>
             Browse Items
           </Link>
           

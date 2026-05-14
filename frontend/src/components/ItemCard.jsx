@@ -7,7 +7,6 @@ export default function ItemCard({ item, index, refreshItems }) {
   const { user } = useContext(AuthContext);
   const isLost = item.category === "Lost";
 
-  // Important: Convert user_id to string for comparison since JWT identity is a string
   const isOwner = user && String(user.id) === String(item.user_id);
 
   const handleDelete = async () => {

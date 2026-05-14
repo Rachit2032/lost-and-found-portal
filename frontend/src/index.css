@@ -140,3 +140,19 @@ input, textarea, select {
 .input-field::placeholder {
   color: var(--text-muted);
 }
+
+
+.browse-btn {
+  text-decoration: none;
+  color: red;
+  background-color: rgb(237, 219, 154);
+  font-weight: 600;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.browse-btn:hover {
+  background-color: rgb(218, 192, 98);
+}

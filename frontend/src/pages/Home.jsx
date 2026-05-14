@@ -45,7 +45,6 @@ export default function Home() {
 
   // Advanced Filtering Logic
   const filtered = items.filter(i => {
-    // 1. HIDDEN IF RESOLVED: Skip this item entirely if it is found/returned
     if (i.is_resolved) return false;
 
     // 2. Status Filter
@@ -69,7 +68,6 @@ export default function Home() {
 
   return (
     <main style={{ maxWidth: 1100, margin: "0 auto", padding: "40px 24px 80px" }}>
-      {/* Hero header */}
       <div style={{ marginBottom: 40 }} className="fade-up">
         <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--accent-amber)", marginBottom: 10 }}>
           Community Board
@@ -83,7 +81,6 @@ export default function Home() {
         </p>
       </div>
 
-      {/* Stats strip */}
       {!loading && !error && (
         <div className="fade-up" style={{ display: "flex", gap: 12, marginBottom: 32, animationDelay: "80ms" }}>
           {[
@@ -167,9 +164,7 @@ export default function Home() {
               item={item}
               index={i}
 
-              /* THIS IS THE CRUCIAL LINE RIGHT HERE */
               refreshItems={fetchItems}
-            /* ----------------------------------- */
             />
           ))}
       </div>
